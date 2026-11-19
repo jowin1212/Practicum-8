@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalTrade - B2B Marketplace</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+       
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f8fb;
+            color: #203040;
+            transition: background-color 0.5s;
+        }
+
+     
+        header {
+            background-color: #123047;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        nav {
+            background-color: #176b87;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* INTRODUCTION */
+        .intro {
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .intro h2 {
+            color: #176b87;
+            font-size: 28px;
+        }
+
+        /* PRODUCT GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* PRODUCT CARDS */
+        .card {
+            position: relative;
+            height: 230px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px #0002;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* IMAGE OVERLAY */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(transparent, #123047);
+            color: white;
+            text-align: center;
+        }
+
+        .overlay h3 {
+            margin: 10px 0;
+            color: #ffd166;
+        }
+
+        .overlay p {
+            margin: 5px 0;
+        }
+
+        /* DESKTOP */
+        @media screen and (min-width: 901px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* TABLET */
+        @media screen and (max-width: 900px) {
+            body {
+                background-color: #e0f2ff;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .intro h2 {
+                font-size: 25px;
+            }
+        }
+
+        /* MOBILE */
+        @media screen and (max-width: 500px) {
+            body {
+                background-color: #eaf5ff;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 18px;
+            }
+
+            .card {
+                height: 220px;
+            }
+
+            header {
+                padding: 15px 8px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            nav {
+                padding: 12px 5px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+                font-size: 14px;
+            }
+
+            .intro {
+                padding: 15px 10px;
+            }
+
+            .intro h2 {
+                font-size: 22px;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #123047;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        footer h3 {
+            color: #ffd166;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="home">
+        <h1>🌍 TradeSphere</h1>
+        <p>Connecting Buyers and Suppliers Worldwide</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#gallery">PRODUCTS</a>
+        <a href="#offers">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+    <!-- INTRODUCTION -->
+    <section class="intro">
+        <h2>Explore Global B2B Marketplace 🌐</h2>
+        <p>Discover quality products and connect with trusted suppliers around the world.</p>
+    </section>
+
+    <!-- PRODUCT GALLERY -->
+    <section class="gallery" id="gallery">
+
+        <div class="card">
+            <img src="industiral_products.png" alt="Industrial products">
+            <div class="overlay">
+                <h3>Industrial Products</h3>
+                <p>Global manufacturing suppliers</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="footware.png" loading="lazy" alt="Footwear products">
+            <div class="overlay">
+                <h3>Footwear</h3>
+                <p>Wholesale footwear marketplace</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="agriculture.png" loading="lazy" alt="Agricultural products">
+            <div class="overlay">
+                <h3>Agriculture</h3>
+                <p>International agricultural exports</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="furniture.png" loading="lazy" alt="Furniture products">
+            <div class="overlay">
+                <h3>Furniture</h3>
+                <p>Furniture and interior suppliers</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="textile.png" loading="lazy" alt="Textile products">
+            <div class="overlay">
+                <h3>Textiles</h3>
+                <p>Worldwide textile trading</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="electronics.png" loading="lazy" alt="Technology equipment">
+            <div class="overlay">
+                <h3>Electronics</h3>
+                <p>Electronic goods and equipment</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="logistics.png" loading="lazy" alt="Shipping containers">
+            <div class="overlay">
+                <h3>Logistics</h3>
+                <p>International shipping solutions</p>
+            </div>
+        </div>
+
+        <div class="card" id="offers">
+            <img src="consumur_goods.png" loading="lazy" alt="Commercial products">
+            <div class="overlay">
+                <h3>Consumer Goods</h3>
+                <p>Connect with global buyers</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="contact">
+        <h3>🌍 TradeSphere</h3>
+        <p>Your Trusted B2B Marketplace for Global Trade.</p>
+        <p>Connecting Businesses, Buyers and Suppliers Worldwide!</p>
+    </footer>
+
+</body>
+</html>
